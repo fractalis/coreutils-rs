@@ -37,8 +37,8 @@ fn main() {
     };
 
     match utils.get(util_name) {
-        Some(&(uumain, _)) => {
-            process::exit(uumain(InfArgs {}));
+        Some(&(infmain, _)) => {
+            process::exit(infmain(InfArgs {}));
         }
         None => {
             if *util_name == "--help" {
