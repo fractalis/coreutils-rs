@@ -8,7 +8,7 @@ pub fn main(_args: TokenStream, stream: TokenStream) -> TokenStream {
     let new = quote!(
         pub fn infmain(args: inf_common::InfArgs) -> i32 {
             #stream
-            let result = inf_app();
+            let result = infmain(args);
             println!("Result: {}", result);
             result
         }
